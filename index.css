@@ -1,0 +1,275 @@
+/* the props */
+@import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+/*
+* xxs: 240px (smartwatch)
+* xs: 360px (small phone)
+* sm: 480px (big phone)
+* md: 768px (tablet)
+* lg: 1024px (phone landscape)
+* xl: 1440px (laptop)
+* xxl: 1920px (monitor)
+*/
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--size-10);
+}
+
+.hero-banner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  padding: 0 8px;
+  margin-top: 16px;
+}
+
+.hero-banner__address {
+  display: block;
+}
+
+.hero-banner__potrait {
+  width: var(--size-14);
+  height: var(--size-14);
+  border-radius: var(--radius-round);
+  box-shadow: var(--shadow-3);
+}
+
+.hero-banner__bio {
+  display: block;
+}
+
+@media screen and (max-width: 820px) {
+  .hero-banner__address {
+    display: none;
+  }
+
+  .hero-banner__bio {
+    display: none;
+  }
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  margin-top: 32px;
+}
+
+.description__text {
+  text-align: center;
+}
+
+.education {
+  margin-top: 56px;
+}
+
+.education__title {
+  margin: auto;
+  text-align: center;
+}
+
+.education__carousel {
+  margin-top: 24px;
+}
+
+.education__carousel-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.education__item-image {
+  width: var(--size-14);
+  height: var(--size-14);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-5);
+}
+
+.education__item-institute {
+  margin-top: 8px;
+}
+
+.education__item-time {
+}
+
+.education__item-degree {
+}
+
+@media screen and (max-width: 480px) {
+  .education__carousel-cell {
+    width: 100%;
+  }
+}
+
+.experience {
+  margin-top: 76px;
+  padding: 0 8px;
+}
+
+.experience__title {
+  margin: auto;
+  text-align: center;
+}
+
+.experience__card {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.experience__card:nth-child(2) {
+  margin-top: 32px;
+}
+
+.experience__company {
+}
+
+.experience__card:nth-child(odd) .experience__company {
+  order: 1;
+}
+
+.experience__company-image {
+  width: 750px;
+  height: 500px;
+  box-shadow: var(--shadow-2);
+}
+
+.experience__desc {
+}
+
+.experience__desc-company {
+}
+
+.experience__desc-position {
+}
+
+.experience__desc-time {
+}
+
+.experience__desc-task {
+  padding-left: 20px;
+}
+
+.experience__desc-task-item {
+}
+
+@media screen and (max-width: 768px) {
+  .experience__card {
+    display: block;
+  }
+
+  .experience__company-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .experience__desc {
+    margin-top: 24px;
+  }
+}
+
+.skills {
+  margin-top: 56px;
+}
+
+.skills__title {
+}
+
+.skills__card-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--size-14);
+  height: var(--size-14);
+  gap: 8px;
+}
+
+.skills__image {
+  width: var(--size-12);
+  height: var(--size-12);
+  border-radius: var(--radius-round);
+  background-color: white;
+}
+
+.skills__name {
+  text-align: center;
+}
+
+.skills__description {
+  text-align: center;
+}
+
+.contact {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: var(--border-size-3) solid var(--gray-2);
+  padding: 50px;
+  text-align: center;
+}
+
+.contact__or {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-round);
+  background-color: var(--gray-2);
+  padding: 8px;
+}
+
+.contact__download {
+  margin-top: 8px;
+  color: var(--gray-8);
+}
+
+.contact__download-button {
+}
+
+.contact__email {
+  margin-top: 8px;
+  font-size: var(--font-size-4);
+  color: var(--gray-8);
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
